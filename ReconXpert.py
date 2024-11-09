@@ -18,7 +18,7 @@ import threading
 import time
 from fpdf import FPDF
 from pynput import keyboard
-import queue # Add this import
+import queue 
 import asyncio
 import asyncssh
 import re
@@ -171,13 +171,10 @@ def update_log_box(log_box):
     log_box.delete(1.0, tk.END)
     # Insert ASCII art at the top of the log box
     ascii_art = r"""
-     ____   ___   ___  _   _  ___ _   ____             _____       
-    |  _ \ / _ \ / _ \| |_| |/ (_) |_|  _ \ __ ___   _|___ / _ __  
-    | |_) | | | | | | | __| ' /| | __| |_) / _` \ \ / / |_ \| '_ \ 
-    |  _ <| |_| | |_| | |_| . \| | |_|  _ < (_| |\ V / ___) | | | |
-    |_| \_\\___/ \___/ \__|_|\_\_|\__|_| \_\__,_| \_/ |____/|_| |_|
-    Amir Faramarzpour 2024-2025
-    Cod3d in Python
+ReconXpert- Result
+Cod3d in Python
+Developed by: Amir Faramarzpour
+Year: 2024-2025
     """
     log_box.insert(tk.END, ascii_art + "\n")
     log_box.insert(tk.END, "System Information\n====================================================\n")
@@ -448,8 +445,10 @@ def save_main_log_box_content(log_box):
 
 def create_main_window():
     root = tk.Tk()
-    root.title("R00tKitRav3n v5.0.0")
+    root.title(".::ReconXpert::.")
     root.geometry("800x600")
+    root.resizable(False, False)  # Disable resizing
+
 
     style = ThemedStyle(root)
     style.set_theme("equilux")  # Set the desired theme from ttkthemes
@@ -556,9 +555,9 @@ def create_main_window():
     copyright_frame = ttk.Frame(root)
     copyright_frame.pack(side=tk.BOTTOM, fill=tk.X, padx=5, pady=5)
 
-    server_ip = socket.gethostbyname(socket.gethostname())  # Retrieve the server IP address
-    copyright_text = f"© 2024-2025 R00tKitRav3n. All rights reserved."
-    ttk.Label(copyright_frame, text=copyright_text, font=("Arial", 10)).pack()
+    #server_ip = socket.gethostbyname(socket.gethostname())  # Retrieve the server IP address
+    #copyright_text = f"© 2024-2025 R00tKitRav3n. All rights reserved."
+    #ttk.Label(copyright_frame, text=copyright_text, font=("Arial", 10)).pack()
 
 
    # Info & Credits tab
@@ -573,16 +572,48 @@ def create_main_window():
     System Information, File Sharing Server and SSH Platform
     =========================================
     
-     ____   ___   ___  _   _  ___ _   ____             _____       
-    |  _ \ / _ \ / _ \| |_| |/ (_) |_|  _ \ __ ___   _|___ / _ __  
-    | |_) | | | | | | | __| ' /| | __| |_) / _` \ \ / / |_ \| '_ \ 
-    |  _ <| |_| | |_| | |_| . \| | |_|  _ < (_| |\ V / ___) | | | |
-    |_| \_\\___/ \___/ \__|_|\_\_|\__|_| \_\__,_| \_/ |____/|_| |_|
+     ____                     __  __                _   
+    |  _ \ ___  ___ ___  _ __ \ \/ /_ __   ___ _ __| |_ 
+    | |_) / _ \/ __/ _ \| '_ \ \  /| '_ \ / _ \ '__| __|
+    |  _ <  __/ (_| (_) | | | |/  \| |_) |  __/ |  | |_ 
+    |_| \_\___|\___\___/|_| |_/_/\_\ .__/ \___|_|   \__|
+                                   |_|                  
     Cod3d in Python
     Developed by: Amir Faramarzpour
     Year: 2024-2025
 
-    Credits:
+
+1. **Introduction**:
+
+    Useful Information:
+    - This tool provides system information, keylogging, SSH, and file sharing capabilities.
+    - Ensure you have appropriate permissions to use these features.
+    - Keep your software up to date for security and performance improvements.
+    - Always use secure passwords and encryption for SSH connections.
+
+
+2. **Installation Guide**:
+
+   - System requirements: Windows 10 and Higher - All Linux Distributions
+   - This application is Portable and no further installation needed. 
+
+
+3. **Data Collection**:
+
+   - This Applicatin Does collecting sensetive data like system information and keystroks.
+   - This program does NOT share data. 
+   - All logs.txt remains in local storage in the same app directory.
+
+
+4. **Support and Contact Information**:
+
+   - Need help or report issues?
+   - feedback and inquiries?
+   - Contact : https://t.me/amir_faramarzpour
+
+
+5. **Credits**:
+
     - Python Software Foundation: Python language and standard libraries
     - Tkinter: GUI development
     - Pynput: Keylogger functionality
@@ -591,13 +622,38 @@ def create_main_window():
     - Folium: Map generation
     - Psutil: System and process utilities
     - TTkthemes: Themed Tkinter widgets
-    
-    Useful Information:
-    - This tool provides system information, keylogging, SSH, and file sharing capabilities.
-    - Ensure you have appropriate permissions to use these features.
-    - Keep your software up to date for security and performance improvements.
-    - Always use secure passwords and encryption for SSH connections.
 
+     ____  _          _       _                     
+    |  _ \(_)___  ___| | __ _(_)_ __ ___   ___ _ __ 
+    | | | | / __|/ __| |/ _` | | '_ ` _ \ / _ \ '__|
+    | |_| | \__ \ (__| | (_| | | | | | | |  __/ |   
+    |____/|_|___/\___|_|\__,_|_|_| |_| |_|\___|_|   
+    Disclaimer: For Educational Purposes Only
+
+    This software, ReconXpert, is intended solely for educational purposes.
+    The developers do not assume any liability or responsibility for any misuse
+    or consequences arising from the use of this software. The software should 
+    not be used for any illegal activities. Users are encouraged to use this 
+    software responsibly and in accordance with applicable laws and regulations.
+
+5. **MIT License**:
+
+    Copyright (c) [2024] [Amir Faramarzpour]
+
+    Permission is hereby granted, free of charge, to any person obtaining
+    a copy of this software and associated documentation files (the "ReconXpert"),
+    to deal in the ReconXpert without restriction,including without limitation
+    the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or
+    sell copies of the ReconXpert, and to permit persons to whom the ReconXpert is 
+    furnished to do so, subject to the following conditions:
+
+    The above copyright notice and this permission notice shall be included in all copies
+    or substantial portions of the ReconXpert. THE SOFTWARE IS PROVIDED "AS IS", WITHOUT
+    WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES
+    OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT
+    SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY,
+    WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION
+     WITH THE ReconXpert OR THE USE OR OTHER DEALINGS IN THE ReconXpert.
 
     """
 
