@@ -18,7 +18,7 @@ import threading
 import time
 from fpdf import FPDF
 from pynput import keyboard
-import queue 
+import queue # Add this import
 import asyncio
 import asyncssh
 import re
@@ -562,7 +562,7 @@ def create_main_window():
 
    # Info & Credits tab
     frame_info = ttk.Frame(notebook)
-    notebook.add(frame_info, text="Info & Credits")
+    notebook.add(frame_info, text="Disclaimer & License")
 
     info_text = tk.Text(frame_info, height=20, width=60, wrap=tk.WORD)
     info_text.pack(fill=tk.BOTH, expand=True, padx=10, pady=10)
